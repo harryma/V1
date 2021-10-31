@@ -14,11 +14,22 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "babel-plugin-styled-components": "^1.13.3",
     "gatsby": "^3.14.3",
+    "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-sass": "^5.1.0-next.0",
     "gatsby-plugin-styled-components": "^4.14.0",
+    "jquery": "^3.6.0",
+    "node-sass": "^6.0.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "sass": "^1.43.2",
     "styled-components": "^5.3.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.3.7",
+    "babel-plugin-styled-components": "^1.13.3",
+    "gatsby-plugin-postcss": "^4.14.0",
+    "postcss": "^8.3.10",
+    "tailwindcss": "^2.2.17"
   }
 }
