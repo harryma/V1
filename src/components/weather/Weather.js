@@ -22,16 +22,20 @@ const Weather = () => {
   }
 
   return (
-    <span key="1">
+    <>
       {weather.map((weather) => {
         return (
           <span className="text-sm">
             {weather.condition.text}{" "}
             <img src={weather.condition.icon} className="weatherIcon" alt="" />
+            <span
+              id="weather-code"
+              className={"code--" + weather.condition.code}
+            ></span>
           </span>
         );
       })}
-    </span>
+    </>
   );
 };
 

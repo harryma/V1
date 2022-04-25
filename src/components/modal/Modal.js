@@ -28,11 +28,6 @@ const ModalContainer = styled.div`
 
 export const Modal = ({ showModal, setShowModal, e }) => {
   const modalRef = useRef();
-  // const focusableElements = document.querySelectorAll(
-  //   "#thisModal button, #thisModal a"
-  // );
-  // const firstFocusableElement = focusableElements[0];
-  // const lastFocusableElement = focusableElements[focusableElements.length - 1];
 
   const closeModal = (e) => {
     if (modalRef.current === e.target) {
@@ -46,41 +41,10 @@ export const Modal = ({ showModal, setShowModal, e }) => {
     }
   });
 
-  // const tabIndex = useCallback((e) => {
-  //   const isTabPressed = e.key === "Tab" || e.keyCode === 9;
-  //   if (e.key === isTabPressed && showModal) {
-  //     if (e.shiftKey) {
-  //       // if shift key pressed for shift + tab combination
-  //       if (document.activeElement === firstFocusableElement) {
-  //         lastFocusableElement.focus(); // add focus for the last focusable element
-  //         e.preventDefault();
-  //       }
-  //     } else {
-  //       // if tab key is pressed
-  //       if (document.activeElement === lastFocusableElement) {
-  //         // if focused has reached to last focusable element then focus first focusable element after pressing tab
-  //         firstFocusableElement.focus(); // add focus for the first focusable element
-  //         e.preventDefault();
-  //       }
-  //     }
-  //   }
-  //   if (!isTabPressed) {
-  //     return;
-  //   }
-  // });
-
   useEffect(() => {
     document.addEventListener("keydown", keyPress);
     return () => document.removeEventListener("keydown", keyPress);
   }, [keyPress]);
-
-  // useEffect(
-  //   (e) => {
-  //     document.addEventListener("keydown", tabIndex);
-  //     return () => document.removeEventListener("keydown", tabIndex);
-  //   },
-  //   [tabIndex]
-  // );
 
   return (
     <>
